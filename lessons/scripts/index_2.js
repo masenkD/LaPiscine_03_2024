@@ -126,20 +126,33 @@ let result = 0
 
 // MOYENNE = TOTAL / nbElements
 
-for (let i = 0; i < numbers.length; i++) { {
-    result += numbers[i]
-    }
-}
-console.log(result)
+// for (let i = 0; i < numbers.length; i++) { {
+//     result += numbers[i]
+//     }
+// }
+// console.log(result)
 
-let average = result/numbers.length
-console.log(average)
+// let average = result/numbers.length
+// console.log(average)
 
-result = 0
+// result = 0
 
-for (let i = 0; i < numbers.length; i++) { 
-        if (numbers[i] > average) {
-        result += numbers[i]
-        }
-    }
-console.log(result) 
+// for (let i = 0; i < numbers.length; i++) { 
+//         if (numbers[i] > average) {
+//         result += numbers[i]
+//         }
+//     }
+// console.log(result) 
+
+// MANIPULATION DU DOM
+const stripes = document.querySelectorAll('.stripe')
+
+for (let i = 0; i < stripes.length; i++) {
+    // stripes[i].style.backgroundColor = "white"
+    stripes[i].style.backgroundColor = `rgb(${15 * i}, ${8 * i}, 20)`
+    // if (i % 2 === 1) {
+    //     stripes[i].style.backgroundColor = "black"
+    // }
+} 
+
+
