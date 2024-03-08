@@ -229,7 +229,7 @@ let myArrayOfObjects = [
     {name: 'Stéphane', gender:'m', age: 15},
 ]
 
-let objectToTest = myArrayOfObjects[3]
+let objectToTest = myArrayOfObjects[1]
 let gone = "parti"
 
 if (objectToTest.gender == 'f') {
