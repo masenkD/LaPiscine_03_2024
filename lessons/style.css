@@ -12,10 +12,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.5s;
 }
 
-.stripe {
+.btn {
+    border: 4px black solid;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 10px;
+    font-family: "Roboto";
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.5s;
+}
+
+.btn-blue {
     background-color: blue;
-    width: 10vw;
-    height: 100vh;
+}
+
+.btn-yellow {
+    background-color: yellow;
+}
+
+.btn-red {
+    background-color: red;
 }
