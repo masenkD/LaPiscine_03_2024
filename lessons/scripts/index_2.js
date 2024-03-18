@@ -1,20 +1,20 @@
-let person1 = {
-    name: 'Max',
-    vehicle:'car',
-    town:'Paris'
-}
+// let person1 = {
+//     name: 'Max',
+//     vehicle:'car',
+//     town:'Paris'
+// }
 
-let person2 = {
-    name: 'Nathalie',
-    vehicle:'bike',
-    town:'Bordeaux'
-}
+// let person2 = {
+//     name: 'Nathalie',
+//     vehicle:'bike',
+//     town:'Bordeaux'
+// }
 
-let person3 = {
-    name: 'Cathy',
-    vehicle:'car',
-    town:'Lyon'
-}
+// let person3 = {
+//     name: 'Cathy',
+//     vehicle:'car',
+//     town:'Lyon'
+// }
 
 // écrire la condition pour afficher "{Un tel} a une voiture"
 
@@ -153,6 +153,30 @@ for (let i = 0; i < stripes.length; i++) {
     // if (i % 2 === 1) {
     //     stripes[i].style.backgroundColor = "black"
     // }
-} 
+}
 
+let person1 = {
+    name: 'Max',
+    vehicle:'car',
+    town:'Paris'
+}
 
+let person2 = {
+    name: 'Nathalie',
+    vehicle:'bike',
+    town:'Bordeaux'
+}
+
+let person3 = {
+    name: 'Cathy',
+    vehicle:'car',
+    town:'Lyon'
+}
+
+const people = [person1, person2, person3]
+
+// à l'aide de la méthode filter () et map(), afficher les noms des gens qui ont une voiture
+
+const peopleWithCar = people.filter(el => el.vehicle)
+    if(el.vehicle === "car") return el.name
+console.log (peopleWithCar)
