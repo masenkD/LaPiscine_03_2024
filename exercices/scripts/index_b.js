@@ -13,11 +13,8 @@ import movies from '../data/movies.json' assert {type: "json"}
 // d. Logger le titre du film qui a la meilleure note
 const bestMovie = getBestMovie(movies)
 // console.log(bestMovie.title)
-
 // difficulté supplémentaire : on peut utiliser la méthode de tableau .sort()
-
-console.log(bestMovie.title);
-
+// console.log(bestMovie.title);
 function getBestMovie(arr) {
     // let best = arr[0]
     // arr.forEach((element) => {
@@ -26,15 +23,12 @@ function getBestMovie(arr) {
     //     }
     // })
     // return best
-
     return arr.sort((a, b) => b.rate - a.rate)[0];
-
     //return arr[0]
 }
-
 // e. Logger le titre du film le plus ancien
 const oldestMovie = getOldestMovie(movies)
-console.log(oldestMovie.title)
+// console.log(oldestMovie.title)
 // difficulté supplémentaire : on peut utiliser la méthode de tableau .sort()
 function getOldestMovie(arr) {
     let oldest = arr[0]
@@ -48,7 +42,7 @@ function getOldestMovie(arr) {
 // f. Logger un tableau de tous les titres de film qui ont au moins 3 acteurs
 // .reduce()
 const moviesWithMoreThan2Actors = getAllMoviesWithMoreThan2Actors(movies)
-console.log(moviesWithMoreThan2Actors)
+// console.log(moviesWithMoreThan2Actors)
 function getAllMoviesWithMoreThan2Actors(arr) {
     const filteredArray = arr.filter(el => {
         return el.actors.length > 2
@@ -58,13 +52,13 @@ function getAllMoviesWithMoreThan2Actors(arr) {
 }
 // 1. Ecrire une fonction qui prend en parametre le tableau movies et qui retourne un nouveau tableau de tous les titres de films
 const resTitles = getTitles(movies)
-console.log(resTitles);
+// console.log(resTitles);
 function getTitles(arr) {
     return arr.map(el => el.title)
 }
 // 2. Ecrire une fonction qui prend en parametre une annee et un tableau (movies), et qui retourne un nouveau tableau de titres de film de l'annee specifiee
 let resultArr = getMoviesByYear(movies, 1994)
-console.log(resultArr)
+// console.log(resultArr)
 function getMoviesByYear(arr, yearParam) {
     const filteredArray = arr.filter(el => {
         return el.year === yearParam
@@ -74,7 +68,7 @@ function getMoviesByYear(arr, yearParam) {
 }
 // 3. Ecrire une fonction qui prend en parametre un realisateur et un tableau (movies), et qui retourne un nouveau tableau de tous les titres de films de ce realisateur
 const resMoviesDirector = getMoviesByDirector(movies, "Christopher Nolan")
-console.log(resMoviesDirector);
+// console.log(resMoviesDirector);
 function getMoviesByDirector(arr, directorParam) {
     const filteredArray = arr.filter(el => {
         return el.director === directorParam
@@ -90,3 +84,48 @@ function getMoviesByDirector(arr, directorParam) {
     // return emptyArray;
 }
 // -> retourne un nouveau tableau de tous les noms d'acteurs des films de ce realisateur
+// écrire une fonction qui prend en paramètre le tableau movies et un titre de film, et qui me retourne l'objet movie qui correspond au titre
+const movie = getMovieByTitle(movies, "Interstellar")
+// console.log(movie)
+
+function getMovieByTitle(arr, titleParam) {
+    // let movie = "not found"
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i].title === titleParam) {
+    //         movie = arr[i]
+    //         break
+    //     }
+    // }
+
+    // arr.forEach(el => {
+    //     if (el.title === titleParam) {
+    //         movie = el
+    //     }
+    // })
+
+    const movies = arr.find(el => el.title === titleParam)
+    return movies
+}
+
+
+// écrire une fonction qui prend en paramètre le tableau movies, le nom d'un acteur, et qui me retourne un tableau des films dans lesquels joue cet acteur
+
+// const res = getMoviesByActor(movies, "John Travolta")
+// console.log(movies.filter(movie => movie.actors.includes('John Travolta')))
+
+// function getMoviesByActor(arr, actorName) {
+//     // const movies = []
+//     // une première boucle pour parcourir tous les films
+//     arr.forEach(movie => {
+//         movie.actors.forEach(actor => {
+//             if (actor === actorName) {
+//                 movies.push(movie)
+//             }
+//         })
+//         if (movie.actors.includes(actorName)) movies.push(movie)
+//     })
+//     // une seconde boucle dans la première, pour parcourir tous les actors d'un film et voir si un des actors correspond au paramètre actorName
+
+//     // return movies
+//     // return arr.filter(movie => movie.actors.includes(actorName))
+// }
